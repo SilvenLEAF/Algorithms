@@ -1,2 +1,2 @@
-# WEB-SCRAPER
-This is the very first WEB-SCRAPER.
+# Algorithms
+Learning the algorithms and datastructures and practicing here.
