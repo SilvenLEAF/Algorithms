@@ -1,23 +1,47 @@
-const numWays = s => {
+
+
+
+const res = patternCounter("ababa")
+console.log(res)
+
+
+
+//main function
+//counts the total number of pattern 
+function patternCounter(s) {
+
   const n = s.length;
-  const modulo = 1000000007;
+  const modulo = 10 ** 9 + 7;
   
-  //Count the ones and process the limiting cases of ones not being divisible by 3 or there being no ones
-  const onesCount = s.split('').filter(c => c === '1').length;
-  if (onesCount % 3) return 0;
-  else if (onesCount === 0) return (n-2)*(n-1)/2 % modulo;
+
+  //counting total no of a in the given string
+  const countA = s.split('').filter(item => item === 'a').length;
+
+
+
+  // if it's not possible to divide into 3 sections
+  if (countA % 3) return 0;
+
+
+
+  // if there's no a in the given string
+  if (countA === 0) return (n-2)*(n-1)/2 % modulo;
   
-  //Iterate linearly through array and count ones; when the first quota of ones is reached exactly, count the zeroes and do the same for when the second quota is reached exactly
-  const onesPortion = onesCount/3;
-  let firstFactor = 0, secondFactor = 0, currOnes = 0;
-  for (let c of s){
-      if (c === '1') currOnes++;
+
+
+  
+  const portionA = countA/3;
+  let firstGap = 0, secondGap = 0, count = 0;
+
+
+  for (let item of s){
+      if (item === 'a') count++;
       else {
-          if (currOnes === onesPortion) firstFactor++;
-          if (currOnes === onesPortion*2) secondFactor++;
+          if (count === portionA) firstGap++;
+          if (count === portionA*2) secondGap++;
       }
   }
   
-  //Number of ways to split into 3 parts containing equal amounts of ones are proportional to the amount of zeroes between the quota groups because the partition can exist at any position within the zeroes groups. Add 1 to each zero count because the partition exists on either side of the zeroes.
-  return (firstFactor+1)*(secondFactor+1) % modulo;
+  
+  return (firstGap+1)*(secondGap+1) % modulo;
 };
