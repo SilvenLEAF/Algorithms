@@ -21,9 +21,9 @@ const twoSum = (nums, target) => { // nums is an array of numbers, target is a s
   const map = new Map(); // creating a new Map object in JavaScript
   
 
-  
+  const numsLength = nums.length;
 
-  for(let i = 0; i<nums.length; i++) { // doing a liner search, iterating through all the numbers in that nums
+  for(let i = 0; i<numsLength; i++) { // doing a liner search, iterating through all the numbers in that nums
       
     const num = nums[i]; // storing the number inside num
 
