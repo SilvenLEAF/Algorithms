@@ -1,4 +1,20 @@
-// ALGORITHMS
+// ALGORITHMS 1
+
+
+
+/* 
+Create a function that takes an array of numbers as its first argument and a target number as its second argument,
+There will be only two numbers in that array that add up to the target number, return their indices as an array
+by that created function, also the number and its complement number must not be the same number with thesame index
+
+
+Your approach MUST be
+TIME COMPLEXITY: O(n)
+SPACE COMPLEXITY: O(n)
+
+*/
+
+
 const twoSum = (nums, target) => { // nums is an array of numbers, target is a single number
   
   
