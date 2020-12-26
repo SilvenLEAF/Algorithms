@@ -40,7 +40,11 @@ const twoSum = (nums, target) => { // nums is an array of numbers, target is a s
 
 // Testing the function
 const res = twoSum([2,7,11,15], 9);
-
+const res1 = twoSum([3,8,17,19], 27);
+const res2 = twoSum([5,7,10,25], 35);
+const res3 = twoSum([22,34,37,50], 59);
+const res4 = twoSum([2, 3, 5, 6], 7);
+const res5 = twoSum([13,17,21,25], 38);
 
 // OUTPUTTING the TEST result
 console.log(`%c Result is [${  res }]`, `color: red; font-size: 150%`);
