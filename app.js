@@ -41,7 +41,11 @@ const isValid = (s)=>{
 const res = isValid("{[]}");
 
 // OUTPUTTING the TEST result
-console.log(`%c Result is [${  res }]`, `color: red; font-size: 150%`);
-
+console.log(`%c Result is [${  res }]`, `color: orangered; font-size: 150%`);
+console.log(`%c Result is [${  res1 }]`, `color: green; font-size: 150%`);
+console.log(`%c Result is [${  res2 }]`, `color: blue; font-size: 150%`);
+console.log(`%c Result is [${  res3 }]`, `color: black; font-size: 150%`);
+console.log(`%c Result is [${  res4 }]`, `color: orange; font-size: 150%`);
+console.log(`%c Result is [${  res5 }]`, `color: red; font-size: 150%`);
 
 
