@@ -29,15 +29,31 @@ SPACE COMPLEXITY: O(n)
 
 
 
-var singleNumber = function(nums) {
-  let map = {}
+const singleNumber = (nums) => {
+  const map = {}
+
+
   for(let num of nums){
-      if(map[num]) map[num]++
-      else map[num] = 1
+    if(map[num]) map[num]++
+    else map[num] = 1
   }
-   for(let num of nums){
-      if(map[num] === 1) return num
-      
+    
+  for(let num of nums){
+    if(map[num] === 1) return num      
   }
 
 };
+
+
+
+
+
+
+// TESTING the function
+const res = singleNumber([4,1,2,1,2]); //4
+
+
+
+// OUTPUTTING the TEST result
+console.log(`%c Result is [${  res }]`, `color: red; font-size: 150%`);
+
