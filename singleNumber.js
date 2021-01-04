@@ -30,16 +30,16 @@ SPACE COMPLEXITY: O(n)
 
 
 const singleNumber = (nums) => {
-  const map = {}
+  const map = new Map()
 
 
   for(let num of nums){
-    if(map[num]) map[num]++
-    else map[num] = 1
+    if(map.get(num)) map.set(num, map.get(num) + 1);
+    else map.set(num, 1);
   }
     
   for(let num of nums){
-    if(map[num] === 1) return num      
+    if(map.get(num) === 1) return num      
   }
 
 };
