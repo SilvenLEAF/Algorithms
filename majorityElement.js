@@ -24,26 +24,43 @@ SPACE COMPLEXITY: O(n)
 
 
 
-
-
 const majorityElement = (nums) => {
-  const map = new Map();
+  const hash = {};
 
   const length = nums.length;
   for(let num of nums){        
-      if(map.get(num)){
-          map.set(num, map.get(num)+1);
-      } else {
-          map.set(num, 1);
-      }
+    hash[num] = hash[num]+1 || 1;
+    console.log(hash)
   };
   
-  for(let num of nums){
-      
-      if(map.get(num) > length/2) return num;
+  for(let num of nums){      
+    if(hash[num] > length/2) return num;
   }  
 
 };
+
+
+
+
+
+// const majorityElement = (nums) => {
+//   const map = new Map();
+
+//   const length = nums.length;
+//   for(let num of nums){        
+//       if(map.get(num)){
+//           map.set(num, map.get(num)+1);
+//       } else {
+//           map.set(num, 1);
+//       }
+//   };
+  
+//   for(let num of nums){
+      
+//       if(map.get(num) > length/2) return num;
+//   }  
+
+// };
 
 
 
