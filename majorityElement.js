@@ -31,9 +31,7 @@ const majorityElement = (nums) => {
   for(let num of nums){        
     hash[num] = hash[num]+1 || 1;
     console.log(hash)
-  };
   
-  for(let num of nums){      
     if(hash[num] > length/2) return num;
   }  
 
